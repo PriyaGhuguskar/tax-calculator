@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--  <input type="text" class="form-control" id="grossIncome" placeholder="Enter gross annual income"
+                    required>
+                <div class="error invalid-feedback">Please enter a valid number for Gross Annual Income.</div> -->
+
+<body>
+    <div class="container">
+
+        <h1 class="mt-5">Tax Calculator</h1>
+
+        <form id="form" class="col-sm-7 border p-5 border-success needs-validation">
+            <div class="mb-3">
+                <label for="grossIncome" class="form-label is-valid">Enter gross annual income</label>
+                <input type="text" class="form-control" id="grossIncome" placeholder="Enter gross annual income"
+                    required>
+                <div class="error invalid-feedback">Please enter a valid number for Gross Annual Income.</div>
+            </div>
+            <div class="mb-3">
+                <label for="extraIncome" class="form-label is-valid">Enter extra income</label>
+                <input type="text" class="form-control" id="extraIncome"
+                    placeholder="Enter extra income from other sources" required>
+                <div class="error invalid-feedback">Please enter a valid number for Extra Income.</div>
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label is-valid">Age group</label>
+                <!-- <input type="number" class="form-control" id="age" required> -->
+                <select id="ages" class="form-control" id="age" required>
+                    <option value="">Select one Option</option>
+                    <option value="30">age < 40</option>
+                    <option value="40">age ≥ 40 but < 60</option>
+                    <option value="10">age ≥ 60</option>
+                </select>
+                <div class="error invalid-feedback">Please enter a valid Age.</div>
+            </div>
+            <div class="mb-3">
+                <label for="deductions" class="form-label is-valid">Enter total applicable deductions</label>
+                <input type="text" class="form-control" id="deductions" placeholder="add total applicable deductions"
+                    required>
+                <div class="error invalid-feedback">Please enter a valid number for total applicable deductions.</div>
+            </div>
+
+            <button id="submit-btn" type="submit" class="btn btn-success mt-4 col-6">Submit</button>
+        </form>
+
+    </div>
+
+
+    <div class="modal fade" id="taxModal" tabindex="-1" aria-labelledby="taxModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="taxModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="overall-income">Your Overall Income will be</h2>
+                    <h2 id="incomeAfterTax">Your income after tax: </h2>
+                    <div>After Tax Deduction </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

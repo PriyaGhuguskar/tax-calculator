@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-body {
+    padding: 30px !important;
+    color: rgb(28, 28, 59);
+    text-align: center;
+}
+
+.overall-income {
+    font-size: 1.2rem;
+
+}
+
+#incomeAfterTax {
+    font-size: 1.2rem;
+}
